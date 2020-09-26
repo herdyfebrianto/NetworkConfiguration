@@ -1,0 +1,7 @@
+Router(config-if)#ip dhcp pool userlan1 //nama pool dhcp
+Router(dhcp-config)#net 192.168.10.0 255.255.255.0 //network IP dhcp
+Router(dhcp-config)#default 192.168.10.1 //IP dhcp gateway
+Router(dhcp-config)#dns-server 8.8.8.8 //dns gateway
+Router(dhcp-config)#exit
+
+Router(config)ip dhcp exc 192.168.10.1 192.168.10.10 //start IP dhcp
